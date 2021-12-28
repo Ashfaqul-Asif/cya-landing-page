@@ -9,19 +9,25 @@
       </div>
     </div>
     <div class="footer-context">
-      <v-container class="d-flex align-center">
+      <v-container class="d-flex flex-column flex-lg-row align-center">
         <div class="d-flex align-center">
-          <img alt=" Logo" src="@/assets/logo.png" transition="scale-transition" style="width:40px" />
-          <span class="ml-4">Cookie Policy</span>
-          <v-divider color="white" class="ml-4 mr-2 my-4" vertical></v-divider>
+          <img
+            class="logo"
+            alt=" Logo"
+            src="@/assets/logo.png"
+            transition="scale-transition"
+            style="width:40px"
+          />
+          <span class="ml-2 ml-md-4">Cookie Policy</span>
+          <v-divider color="white" class="ml-2 ml-md-4 mr-2 my-4" vertical></v-divider>
           <span>Contact</span>
-          <v-divider color="white" class="ml-4 mr-2 my-4" vertical></v-divider>
+          <v-divider color="white" class="ml-2 ml-md-4 mr-2 my-4" vertical></v-divider>
 
           <span>Term of Use</span>
-          <v-divider color="white" class="ml-4 mr-2 my-4" vertical></v-divider>
+          <v-divider color="white" class="ml-2 ml-md-4 mr-2 my-4" vertical></v-divider>
 
           <span>Imprint</span>
-          <v-divider color="white" class="ml-4 mr-2 my-4" vertical></v-divider>
+          <v-divider color="white" class="ml-2 ml-md-4 mr-2 my-4" vertical></v-divider>
 
           <span>Data Protection</span>
         </div>
@@ -29,13 +35,13 @@
 
         <div
           :class="$vuetify.breakpoint.mdAndUp?'logo-section':''"
-          class="d-flex align-center justify-space-between"
+          class="footer-second-section d-flex align-center justify-space-between py-2"
         >
-          <img src="@/assets/discord-footer.png" alt />
-          <img src="@/assets/facebook.png" alt />
-          <img src="@/assets/instagram.png" alt />
-          <img src="@/assets/twitter.png" alt />
-          © CYAClub, All rights reserved
+          <img class="mx-4 mx-md-0" src="@/assets/discord-footer.png" alt />
+          <img class="mx-4 mx-md-0" src="@/assets/facebook.png" alt />
+          <img class="mx-4 mx-md-0" src="@/assets/instagram.png" alt />
+          <img class="mx-4 mx-md-0" src="@/assets/twitter.png" alt />
+          <span>© CYAClub, All rights reserved</span>
         </div>
       </v-container>
     </div>
@@ -83,7 +89,7 @@ export default {
   width: 520px;
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+/* If the screen size is 1200px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 1200px) {
   .group-image{
     position: absolute;
@@ -127,6 +133,16 @@ export default {
       max-width: 50px;
     }
   }
+  .footer-context span{
+    font-size: 0.75rem;
+  }
+    .footer-context .logo{
+    width: 1.85rem !important;
+  }
+  .footer-second-section span{
+    font-size: 0.75rem;
+  }
+
 }
 @media screen and (max-width: 420px) {
   .group-image{
