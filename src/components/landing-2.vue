@@ -15,7 +15,7 @@
     <section class="register-panel-2 mt-n2">
       <v-container>
         <div class="mx-auto" style="max-width:1086px">
-          <div class="d-flex align-center justify-center mb-10">
+          <div class="d-flex align-center justify-center mb-3 mb-md-10">
             <img class="right-arrow" src="@/assets/point.png" alt />
             <span class="register-hint">ARTISTS Contact Information</span>
           </div>
@@ -24,7 +24,7 @@
           >Please enter the following information - We will get back in touch with you ASAP!</span>
         </div>
 
-        <div class="text-center mt-16">
+        <div class="text-center mt-6 mt-md-16">
           <v-form class="px-2" ref="registerForm" @submit.prevent="onRegister">
             <v-row>
               <v-col cols="12" md="6">
@@ -145,7 +145,7 @@
               label="Email"
               outlined
             ></v-text-field>-->
-            <div class="d-flex justify-center mt-8">
+            <div class="d-flex justify-center mt-4 mt-md-8">
               <v-checkbox
                 v-model="isAccept"
                 label="Accept the Terms and Conditions & Privacy Policy"
@@ -158,7 +158,7 @@
               ></v-checkbox>
             </div>
             <v-btn
-              class="mt-13 mb-11 register-btn"
+              class="mt-6 mb-5 mt-md-13 mb-md-11 register-btn"
               :block="$vuetify.breakpoint.smAndDown"
               type="submit"
               :class="$vuetify.breakpoint.mdAndUp? 'register-btn-width':''"
@@ -249,6 +249,87 @@ $primary-text-color: #EED179;
     font-size: 45px;
   }
 }
+@media screen and (max-width: 960px) {
+    .font-base{
+    font-size:1rem
+  }
+  .img-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .title{
+      font-size: 1.75rem !important;
+      color: $primary-text-color;
+      line-height: 2rem;
+    }
+    .subtitle{
+      color: #ffffff;
+      font-size: 1.25rem;
+    }
+  }
 
+  .register-panel-2{
+  background-color: #350045;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  img{
+    width: 28px!important;
+  }
+  .right-arrow{
+    margin-right: 8px;
+  }
+  .register-hint{
+    color: $primary-text-color;
+    font-size:1rem;
+  }
+}
+}
+@media screen and (max-width: 420px) {
+
+  .img-text{
+    text-align: center;
+    .title{
+      font-size: 1.25rem !important;
+      color: $primary-text-color;
+      line-height: 1.5rem;
+    }
+    .subtitle{
+      color: #ffffff;
+      font-size: 1rem;
+    }
+  }
+  .discord{
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  justify-content: center;
+  .logo{
+    width: 42px!important;
+    margin-right: 1rem;
+    
+  }
+  .text{
+    font-size: 1.75rem;
+    color: $primary-text-color;
+  }
+}
+  .register-panel{
+  background-color: #350045;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  img{
+    width: 28px!important;
+  }
+  .right-arrow{
+    margin-right: 8px;
+  }
+  .register-hint{
+    color: $primary-text-color;
+    font-size:1rem;
+  }
+}
+}
 </style>
 
